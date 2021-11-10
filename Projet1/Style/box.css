@@ -1,0 +1,35 @@
+div {
+    /* si display block inline-block*/
+    /* div est display: block par defaut */
+
+    /*largeur*/
+    width: 150px;
+
+    /*hauteur*/
+    height: 150px;
+    background-color: aqua;
+
+    /* marge interne */
+    /* par defaut les border la hauteur la largeur... se cumulent*/
+    /* règle soit on met une valeur soit x,y*/
+    padding: 30px;
+
+    /* Bordure */
+    border: 40px solid green;
+
+    /* marges externes */
+    margin: 60px 60px 60px 60px;
+    /* top bottom right left */
+
+    /* outline ligne exterieur*/
+    /* ne prend pas de place physique,
+        sert a mettre en valeur un élément */
+    outline: 20px solid red;
+}
+
+.box {
+    /* definie la taille de base de notre element
+    ici les éléments ne se cumule pas mais se superpose a la taille de base
+    attention les bordure ne sont pas impactées */
+    box-sizing: border-box;
+}

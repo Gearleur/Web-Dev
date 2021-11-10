@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html" title="Accueil"><img src="http://cdn.onlinewebfonts.com/svg/img_550731.png" alt="Accueil" width="3%" height="3%"></a>
+        <a href="index_en.html" title="Home (en)"><img src="https://assets.website-files.com/5cdc34afa4217f8020168210/5e7281663e6af0d028ba239f_languageIcon_englishBritish.png" alt="Home (en)" width="3%" height="3%" hreflang="en" lang="en"></a>
+        <a href="menu.html" title="La carte"><img src="http://www.chateaudelarozelle.com/wp-content/uploads/2014/08/icone-menu.png" alt="La carte" width="3%" height="3%"></a>
+        <a href="menu2.html" title="La carte"><img src="http://www.chateaudelarozelle.com/wp-content/uploads/2014/08/icone-menu.png" alt="La carte" width="3%" height="3%"></a>
+        <a href="commande.html" title="Passer commande"><img src="https://cdn-icons-png.flaticon.com/512/66/66348.png" alt="Passer commande" width="3%" height="3%"></a>
+        <a href="a_propos.html" title="A propos"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRdTFXr8f5Q68NTbNdcpqbSX_0FCpeV9iq7Q&usqp=CAU" alt="A propos" width="3%" height="3%"></a>
+    </nav>
+<main>
+    <button onclick="sortList()">Sort</button>
+    <ul id="id01">
+        <li>Oslo</li>
+        <li>Stockholm</li>
+        <li>Helsinki</li>
+        <li>Berlin</li>
+        <li>Rome</li>
+        <li>Madrid</li>
+      </ul>
+      
+      <script>
+            function sortList() {
+                var list, i, switching, b, shouldSwitch;
+                list = document.getElementById("id01");
+                switching = true;
+                /* Make a loop that will continue until
+                no switching has been done: */
+                while (switching) {
+                // start by saying: no switching is done:
+                switching = false;
+                b = list.getElementsByTagName("LI");
+                // Loop through all list-items:
+                for (i = 0; i < (b.length - 1); i++) {
+                    // start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /* check if the next item should
+                    switch place with the current item: */
+                    if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+                    /* if next item is alphabetically
+                    lower than current item, mark as a switch
+                    and break the loop: */
+                    shouldSwitch = true;
+                    break;
+                    }
+                }
+                if (shouldSwitch) {
+                    /* If a switch has been marked, make the switch
+                    and mark the switch as done: */
+                    b[i].parentNode.insertBefore(b[i + 1], b[i]);
+                    switching = true;
+                }
+                }
+            }
+      </script>
+
+</main>
+    
+</body>
+</html>

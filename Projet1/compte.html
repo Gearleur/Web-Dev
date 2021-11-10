@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+<body>
+    <form action="compte.html"
+        enctype="multipart/form-data" method="post">
+        <fieldset id="Formulaire">
+            <legend>Information requise</legend>
+            <div>
+                <label for="Nom">Nom</label>
+                <input type="text" name="Nom"
+                    required id="Nom" placeholder="Dupont"/>
+            </div>
+            <div>
+                <label for="Prenom">Prénom</label>
+                <input type="text" name="Prenom" 
+                    required id="Prenom" placeholder="Othmane"/>
+            </div>
+            <div>
+                <label for="Email">Email</label>
+                <input type="email" name="user_mail"
+                    placeholder="Othmane@gmail.com" required id="email">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Information facultative</legend>
+            <div>
+                <label for="bio">Biographie</label>
+                <textarea name="bio"
+                          placeholder="biographie" id="bio" rows="5" cols="50">
+                </textarea>
+            </div>
+            <div>
+                <label for="Genre-select">Genre</label>
+                    <select id="Genre-select">
+                        <option value="">--Please choose an option--</option>
+                        <option value="Homme">Homme</option>
+                        <option value="Femme">Femme</option>
+                        <option value="Othmane">Othmane</option>
+                        <option value="Helicoptère">Helicoptère</option>
+                        <option value="Eponge">Eponge</option>
+                        <option selected="selected" value="Autre">Autre</option>
+                    </select>
+            </div>
+            <div>
+                <div>Jouet</div>
+                <div>
+                    <label for="balle">Baballe</label>
+                    <input type="radio" id="Balle" name="jouet" value="b"/>
+                </div>
+                <div>
+                    <label for="os">Nonos</label>
+                    <input type="radio" id="os" name="jouet" value="n"/>
+                </div>
+                <div>
+                    <label for="Autre">Autre</label>
+                    <input type="radio" id="Autre" name="jouet" value="a" checked />
+                </div>
+            </div>
+            <div>
+                <label for="Photo">Photo</label>
+                <input type="file" id="visitorphoto" name="visitorPhoto" accept="image/jpg, image/png, image/jpeg" capture>
+            </div>
+            <div>
+                <button name="reset">Reset</button>
+                <button name="submit">Envoyer</button>
+            </div>
+        </fieldset>
+    </form>
+    <section>
+        <div>
+            Retour au site
+            <form action="index.html">
+                <button type="submit">Retour</button>
+        </div>
+    </section>
+    
+</body>
+</html>
